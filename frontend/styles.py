@@ -9,8 +9,8 @@ def get_css():
 
         [data-testid="stAppViewContainer"] {
             background:
-                radial-gradient(circle at top left, rgba(255, 93, 177, 0.22), transparent 34%),
-                radial-gradient(circle at top right, rgba(59, 130, 246, 0.20), transparent 36%),
+                radial-gradient(circle at top left, rgba(255, 93, 177, 0.24), transparent 34%),
+                radial-gradient(circle at top right, rgba(59, 130, 246, 0.23), transparent 36%),
                 linear-gradient(135deg, #fff7fc 0%, #f7f8ff 52%, #f6f0ff 100%);
             color: #1e1b4b;
         }
@@ -31,7 +31,7 @@ def get_css():
             padding: 34px;
             border-radius: 28px;
             box-shadow: 0 20px 50px rgba(95, 72, 191, 0.25);
-            margin-bottom: 26px;
+            margin-bottom: 24px;
             position: relative;
             overflow: hidden;
         }
@@ -47,6 +47,17 @@ def get_css():
             top: -90px;
         }
 
+        .hero-card::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.11);
+            right: 110px;
+            bottom: -85px;
+        }
+
         .hero-title {
             font-size: 46px;
             font-weight: 800;
@@ -60,7 +71,7 @@ def get_css():
         .hero-subtitle {
             font-size: 17px;
             line-height: 1.7;
-            max-width: 760px;
+            max-width: 780px;
             margin-top: 14px;
             margin-bottom: 0;
             color: rgba(255,255,255,0.94);
@@ -79,7 +90,7 @@ def get_css():
 
         .chip {
             background: rgba(255,255,255,0.18);
-            border: 1px solid rgba(255,255,255,0.28);
+            border: 1px solid rgba(255,255,255,0.30);
             border-radius: 999px;
             padding: 8px 13px;
             font-weight: 700;
@@ -88,10 +99,10 @@ def get_css():
         }
 
         .section-title {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 800;
             color: #1e1b4b;
-            margin-top: 12px;
+            margin-top: 18px;
             margin-bottom: 8px;
         }
 
@@ -102,22 +113,13 @@ def get_css():
             line-height: 1.7;
         }
 
-        .soft-card {
-            background: rgba(255,255,255,0.90);
-            border: 1px solid rgba(139, 92, 246, 0.16);
-            border-radius: 24px;
-            padding: 24px;
-            box-shadow: 0 14px 34px rgba(87, 73, 160, 0.10);
-            margin-top: 18px;
-        }
-
         .input-helper {
-            background: rgba(255,255,255,0.78);
+            background: linear-gradient(90deg, rgba(255, 240, 248, 0.95), rgba(230, 241, 255, 0.95));
             border: 1px solid #e9d5ff;
             border-radius: 16px;
             padding: 14px 16px;
             color: #475569;
-            margin-bottom: 14px;
+            margin: 16px 0;
             line-height: 1.6;
         }
 
@@ -169,6 +171,16 @@ def get_css():
             font-size: 16px !important;
         }
 
+        .result-wrapper,
+        .soft-card {
+            background: rgba(255,255,255,0.92);
+            border: 1px solid rgba(139, 92, 246, 0.18);
+            border-radius: 26px;
+            padding: 26px;
+            box-shadow: 0 16px 38px rgba(87, 73, 160, 0.12);
+            margin-top: 22px;
+        }
+
         .result-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -177,9 +189,9 @@ def get_css():
         }
 
         .result-card {
-            border-radius: 20px;
+            border-radius: 22px;
             padding: 22px;
-            min-height: 145px;
+            min-height: 150px;
             box-shadow: 0 12px 26px rgba(88, 73, 160, 0.10);
         }
 
@@ -214,10 +226,10 @@ def get_css():
 
         .card-value {
             color: #1e1b4b;
-            font-size: 21px;
+            font-size: 24px;
             font-weight: 800;
             line-height: 1.3;
-            margin-top: 5px;
+            margin-top: 8px;
         }
 
         .summary-box {
@@ -245,28 +257,65 @@ def get_css():
         .flow-card {
             background: #ffffff;
             border: 1px solid #e9d5ff;
-            border-radius: 18px;
-            padding: 18px;
-            text-align: center;
-            min-height: 155px;
+            border-radius: 20px;
+            padding: 20px;
+            min-height: 170px;
             box-shadow: 0 10px 22px rgba(87, 73, 160, 0.08);
         }
 
         .flow-icon {
             font-size: 34px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .flow-title {
             font-weight: 800;
             color: #1e1b4b;
-            margin-bottom: 6px;
+            font-size: 20px;
+            margin-bottom: 8px;
         }
 
         .flow-desc {
             color: #64748b;
-            font-size: 14px;
-            line-height: 1.5;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .unit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .unit-item {
+            background: linear-gradient(90deg, #fff7fc, #eef6ff);
+            border: 1px solid #e9d5ff;
+            border-radius: 16px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            color: #1e1b4b;
+            font-size: 15px;
+        }
+
+        .unit-category {
+            font-weight: 800;
+            color: #1e1b4b;
+        }
+
+        .unit-target {
+            color: #475569;
+            text-align: right;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.9fr;
+            gap: 16px;
+            margin-top: 16px;
         }
 
         .about-text {
@@ -277,6 +326,25 @@ def get_css():
 
         .about-text strong {
             color: #1e1b4b;
+        }
+
+        .member-card {
+            background: #ffffff;
+            border: 1px solid #e9d5ff;
+            border-radius: 16px;
+            padding: 12px 14px;
+            margin-bottom: 8px;
+            color: #1e1b4b;
+        }
+
+        .member-name {
+            font-weight: 800;
+            color: #1e1b4b;
+        }
+
+        .member-nim {
+            color: #64748b;
+            font-size: 14px;
         }
 
         .footer {
@@ -292,7 +360,7 @@ def get_css():
         }
 
         .stTabs [data-baseweb="tab"] {
-            background: rgba(255,255,255,0.72);
+            background: rgba(255,255,255,0.76);
             border-radius: 999px;
             color: #4c1d95 !important;
             font-weight: 800;
@@ -316,7 +384,9 @@ def get_css():
             }
 
             .result-grid,
-            .flow-grid {
+            .flow-grid,
+            .unit-grid,
+            .about-grid {
                 grid-template-columns: 1fr;
             }
 
